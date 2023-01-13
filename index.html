@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>mini RPG</title>
+</head>
+
+<body>
+
+    <section id="players">
+        <div id="you">
+            <div class="healthbar_container">
+                <div id="your_healthbar"><span>You</span></div>
+            </div>
+        </div>
+
+
+        <div id="enemy">
+            <div class="healthbar_container">
+                <div id="enemy_healthbar"><span>Viking</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="score">
+        <div id="your_score"></div>
+        <div id="enemy_score"></div>
+    </section>
+
+    <section id="actions">
+
+        <audio src="sounds/coup.mp3" id="coup"></audio>
+        <audio src="sounds/broken_shield.mp3" id="broken_shield"></audio>
+        <audio src="sounds/lightining.mp3" id="lightening"></audio>
+        <audio src="sounds/you_win.mp3" id="win_sound"></audio>
+        <audio src="sounds/dead_sound.mp3" id="dead_sound_you"></audio>
+        <audio src="sounds/dead_sound_viking.mp3" id="dead_sound_viking"></audio>
+        <audio src="sounds/potion.mp3" id="potion_sound"></audio>
+        <audio src="sounds/sword_sound.mp3" id="sword_sound"></audio>
+
+        </div>
+
+        <div id="action_message"></div>
+
+        <h4 id="beginthegame">⬇️ CLICK ON A BUTTON TO ATTACK THE VIKING ⬇️ </h4>
+
+        <div id="attackbutton">
+            <button onclick="attackWith('fists')"> 👊 </button>
+            <button onclick="attackWith('dagger')"> 🗡️ </button>
+            <button onclick="attackWith('swords')"> ⚔️ </button>
+            <button onclick="attackWith('axe')"> 🪓 </button>
+            <button onclick="lifeSteal()"> 💓 </button>
+            <button onclick="takePotion('miniPotion')"> 🍺 </button>
+            <button onclick="takePotion('maxiPotion')"> 🛡️ </button>
+            <button onclick="boost()"> 🌟 </button>
+        </div>
+
+        <img id="game_logo" src="images/game_logo.png" alt="axes crossed">
+
+
+        <div id="start"><a href="index.html">START A NEW FIGHT !</a></div>
+    </section>
+
+    <footer></footer>
+
+</body>
