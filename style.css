@@ -3,6 +3,12 @@ body {
     font-family: Cambria, 'Times New Roman', serif, sans-serif;
     height: 100%;
     width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-image: url(images/bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
 #players,
@@ -26,6 +32,8 @@ body {
 
 span{
    color: white;
+   display:flex;
+   align-items: center;
 }
 
 #you{
@@ -69,9 +77,6 @@ span{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(images/bg2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 h4{
@@ -82,7 +87,6 @@ h4{
   padding: 5px 7px;
 }
 
-button,
 #action_message,
 #score_message{
   padding : 15px 5px;
@@ -92,7 +96,7 @@ button,
 }
 
 #attackbutton{
-  padding: 20px;
+  padding: auto;
 }
 
 button{
@@ -100,8 +104,25 @@ button{
   width: 80px;
   height: 80px;
   font-size: 2.5em;
-  border: solid 2px ;
   opacity: 0.8;
+  cursor: pointer;
+  padding : auto;
+  text-align: center;
+  border: solid 2px ;
+  border-radius: 10px;
+}
+
+button:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+button p{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 auto;
+   margin: 0 auto;
 }
 
 #action_message{
@@ -142,7 +163,146 @@ a{
 
 footer{
   width: 100%;
-  bottom: 0px;
+  margin-bottom: 0px;
   height: 30px;
-  background-color: rgb(54, 3, 102);
 }
+
+/* responsive for smartphones________________________________________________________________________________*/
+  @media screen and (max-width: 568px) {
+    #players,
+#score{
+  display : flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+  }
+  
+#you,
+#enemy{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  height : 150px;
+  width: 150px;
+  }
+
+  span{
+   font-size: 0.8em;
+   
+}
+
+ .healthbar_container{
+  border: black solid 2px;
+  border-radius: 5px;;
+  width: 150px;
+  background-color: rgb(204, 169, 235);
+}
+
+#your_healthbar{
+  width: 100%;
+  height : 15px;
+  background-color: rgb(80, 80, 196);
+}
+
+#enemy_healthbar{
+  width: 100%;
+  height : 15px;
+  background-color: hsl(240, 50%, 54%);
+}
+
+#your_score,
+#enemy_score{
+  border-radius: 5px;
+  width: 150px;
+  background-color: rgb(204, 169, 235);
+  padding: 0 2px;
+  text-align: center;
+}
+
+h4{
+  margin: 10px 0 10px 0;
+  color: white;
+  background-color: rgb(76, 28, 131);
+  border-radius: 10px;
+  padding: 5px 7px;
+  font-size: 0.8em;
+}
+
+button,
+#action_message,
+#score_message{
+  padding : 10px 5px;
+  text-align: center;
+  border: solid 2px ;
+  border-radius: 10px;
+}
+
+#attackbutton{
+  width: 70%;
+  margin: 10px auto;
+  padding: 10px auto;
+}
+
+button{
+  justify-content: center;
+  align-items: center;
+  margin: 2px auto;
+  padding: auto;
+  width: 60px;
+  height: 60px;
+  font-size: 1.7em;
+  border: solid 2px ;
+  opacity: 0.8;
+}
+
+button p{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: -20px auto;
+  margin: 0 auto;
+}
+
+#action_message{
+  width: 300px;
+  height: 60px;
+  color: white;
+  background-color: rgb(39, 15, 105);
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: 3% 0 1% 0;
+  opacity: 0.8;
+}
+
+#start{
+  width : 200px; 
+  height : 50px;
+  background-color: rgb(174, 106, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  border:  solid 2px;
+  margin-bottom: 1%;
+}
+
+a{
+  text-decoration: none;
+  color:rgb(57, 8, 90);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#game_logo{
+  width: 100px;
+  margin: 10px 0;
+}
+
+footer{
+  width: 100%;
+  margin-bottom: 0px;
+  height: 30px;
+}
+    }

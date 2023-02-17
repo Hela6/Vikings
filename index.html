@@ -33,7 +33,7 @@
     </section>
 
     <section id="actions">
-
+        <audio src="sounds/Wardruna-Loyndomsriss.mp3" loop></audio>
         <audio src="sounds/coup.mp3" id="coup"></audio>
         <audio src="sounds/broken_shield.mp3" id="broken_shield"></audio>
         <audio src="sounds/lightining.mp3" id="lightening"></audio>
@@ -42,6 +42,9 @@
         <audio src="sounds/dead_sound_viking.mp3" id="dead_sound_viking"></audio>
         <audio src="sounds/potion.mp3" id="potion_sound"></audio>
         <audio src="sounds/sword_sound.mp3" id="sword_sound"></audio>
+        <audio src="sounds/swoosh.mp3" id="swoosh"></audio>
+        <audio src="sounds/woman_attacking.mp3" id="yelling_woman"></audio>
+        <audio src="sounds/Wardruna-Loyndomsriss.mp3" id="BgSound"></audio>
 
         </div>
 
@@ -50,20 +53,36 @@
         <h4 id="beginthegame">⬇️ CLICK ON A BUTTON TO ATTACK THE VIKING ⬇️ </h4>
 
         <div id="attackbutton">
-            <button onclick="attackWith('fists')"> 👊 </button>
-            <button onclick="attackWith('dagger')"> 🗡️ </button>
-            <button onclick="attackWith('swords')"> ⚔️ </button>
-            <button onclick="attackWith('axe')"> 🪓 </button>
-            <button onclick="lifeSteal()"> 💓 </button>
-            <button onclick="takePotion('miniPotion')"> 🍺 </button>
-            <button onclick="takePotion('maxiPotion')"> 🛡️ </button>
-            <button onclick="boost()"> 🌟 </button>
+            <button onclick="attackWith('fists')">
+                <p>👊</p>
+            </button>
+            <button onclick="attackWith('dagger')">
+                <p>🗡️</p>
+            </button>
+            <button onclick="attackWith('swords')">
+                <p>⚔️</p>
+            </button>
+            <button onclick="attackWith('axe')">
+                <p>🪓</p>
+            </button>
+            <button onclick="lifeSteal()">
+                <p>💓</p>
+            </button>
+            <button onclick="takePotion('miniPotion')">
+                <p>🍺</p>
+            </button>
+            <button onclick="takePotion('maxiPotion')">
+                <p>🛡️</p>
+            </button>
+            <button onclick="boost()">
+                <p>🌟</p>
+            </button>
         </div>
 
         <img id="game_logo" src="images/game_logo.png" alt="axes crossed">
 
 
-        <div id="start"><a href="index.html">START A NEW FIGHT !</a></div>
+        <a href="index.html" id="start" id="newFight">START A NEW FIGHT !</a>
     </section>
 
     <footer></footer>

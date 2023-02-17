@@ -27,7 +27,7 @@ function attackWith(p) {
         case "swords":
             logger("You hit Viking with you sword !");
             enemyLife = enemyLife - 20 - booost;
-            let swordSound = document.getElementById('sword_sound');
+            let swordSound = document.getElementById('swoosh');
             swordSound.play();
             break;
         case "axe":
@@ -240,3 +240,4 @@ function stopTheGame() {
         }
     }
 }
+
